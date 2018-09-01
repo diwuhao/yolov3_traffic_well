@@ -49,7 +49,7 @@ tesseract v4.0.0-beta.1.20180608
    若报错通常为环境变量配置错误，重新配置环境变量后重启git bash即可
 3. 安装python依赖包   
 ```
-  pip install opencv-python tensorflow keras -i -i https://pypi.tuna.tsinghua.edu.cn/simple
+  pip install opencv-python tensorflow keras -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 若有其他报错则继续安装依赖包
 
