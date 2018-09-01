@@ -9,6 +9,55 @@ A Keras implementation of YOLOv3 (Tensorflow backend) inspired by [allanzelener/
 
 ---
 
+## 依赖库安装
+
+1. windows系统下确保有安装如下工具：
+    - git https://www.git-scm.com/download/win  （git工具和git bash mingw64工具）
+    - anaconda3 https://repo.anaconda.com/archive/Anaconda3-5.2.0-Windows-x86_64.exe （python安装包）
+    - tessarctor-ocr https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-setup-4.0.0dev-20170510.exe （坐标识别模块,安装博客可见      https://www.cnblogs.com/jianqingwang/p/6978724.html ）
+   分别下载安装后保证在windows下能找到git和git bash
+2. 在windows下启动git bash
+    1) 首先检测git的安装，运行下面的代码：
+```
+  git --version
+```
+应当显示
+```
+$ git --version
+git version x.xx.x.windows.1
+```
+   2) 检验anaconda3的安装:
+   ```
+      python --version
+   ```
+   应当显示
+   ```
+      $ python --version
+Python 3.6.5 :: Anaconda, Inc.
+   ```
+   3）检验tesseract-ocr（orc模块尚未完全加入，目前可以不用装）
+   ```
+       tesseract -v
+   ```
+   正确的输出应该为：
+   ```
+   $ tesseract -v
+tesseract v4.0.0-beta.1.20180608
+ leptonica-1.76.0
+  libgif 5.1.4 : libjpeg 8d (libjpeg-turbo 1.5.3) : libpng 1.6.34 : libtiff 4.0.9 : zlib 1.2.11 : libwebp 0.6.1 : libopenjp2 2.2.0
+   ```
+   若报错通常为环境变量配置错误，重新配置环境变量后重启git bash即可
+3. 安装python依赖包   
+```
+  pip install opencv-python tensorflow keras -i -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+若有其他报错则继续安装依赖包
+
+
+
+
+---
+
 ## Quick Start
 
 1. Download YOLOv3 weights from [YOLO website](http://pjreddie.com/darknet/yolo/).
