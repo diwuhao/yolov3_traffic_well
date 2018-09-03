@@ -27,26 +27,26 @@ A Keras implementation of YOLOv3 (Tensorflow backend) inspired by [allanzelener/
     git version x.xx.x.windows.1
     ```
    2) 检验anaconda3的安装:
-   ```
+    ```
       python --version
-   ```
-   应当显示
-   ```
+    ```
+    应当显示
+    ```
       $ python --version
     Python 3.6.5 :: Anaconda, Inc.
-   ```
+    ```
    3）检验tesseract-ocr（orc模块尚未完全加入，目前可以不用装）
-   ```
+    ```
        tesseract -v
-   ```
-   正确的输出应该为：
-   ```
-   $ tesseract -v
+    ```
+    正确的输出应该为：
+    ```
+    $ tesseract -v
     tesseract v4.0.0-beta.1.20180608
     leptonica-1.76.0
     libgif 5.1.4 : libjpeg 8d (libjpeg-turbo 1.5.3) : libpng 1.6.34 : libtiff 4.0.9 : zlib 1.2.11 :     libwebp 0.6.1 : libopenjp2 2.2.0
-   ```
-   若报错通常为环境变量配置错误，重新配置环境变量后重启git bash即可
+    ```
+    若报错通常为环境变量配置错误，重新配置环境变量后重启git bash即可
 3. 安装python依赖包
     ```
     pip install opencv-python tensorflow keras -i https://pypi.tuna.tsinghua.edu.cn/simple
@@ -65,7 +65,7 @@ A Keras implementation of YOLOv3 (Tensorflow backend) inspired by [allanzelener/
   不报错则表示安装正常，报错请联系1214279441@qq.com
 
 6. 更改tw_yolo.py的输入图片文件位置
-将文件206行位置代码
+    将文件206行位置代码
     ```
         path="C:/Users/12142/Desktop/keras-yolo3/VOCdevkit/VOC2007/JPEGImages/1016/*.jpg"
         outdir = "C:/Users/12142/Desktop/keras-yolo3/VOCdevkit/VOC2007/SegmentationClass"
