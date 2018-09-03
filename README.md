@@ -65,31 +65,18 @@ tesseract v4.0.0-beta.1.20180608
 不报错则表示安装正常，报错请联系1214279441@qq.com
 
 6. 更改tw_yolo.py的输入图片文件位置
-将
-```
-   import glob
-def detect_img(yolo):
+将文件206行位置代码
+```...
     path="C:/Users/12142/Desktop/keras-yolo3/VOCdevkit/VOC2007/JPEGImages/1016/*.jpg"
     outdir = "C:/Users/12142/Desktop/keras-yolo3/VOCdevkit/VOC2007/SegmentationClass"
-    for jpgfile in glob.glob(path):
-        img = Image.open(jpgfile)
-        img = yolo.detect_image(img)
-        img.save(os.path.join(outdir, os.path.basename(jpgfile)))
-        print(jpgfile)
-    yolo.close_session()
+   ...
 ```
 
 ```
- import glob
-def detect_img(yolo):
+...
     path="输入图片路径/*.jpg"
     outdir = "输出图片路径"
-    for jpgfile in glob.glob(path):
-        img = Image.open(jpgfile)
-        img = yolo.detect_image(img)
-        img.save(os.path.join(outdir, os.path.basename(jpgfile)))
-        print(jpgfile)
-    yolo.close_session()
+  ...
 ```
 ---
 
