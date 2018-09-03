@@ -66,17 +66,18 @@ tesseract v4.0.0-beta.1.20180608
 
 6. 更改tw_yolo.py的输入图片文件位置
 将文件206行位置代码
-```...
+```
     path="C:/Users/12142/Desktop/keras-yolo3/VOCdevkit/VOC2007/JPEGImages/1016/*.jpg"
     outdir = "C:/Users/12142/Desktop/keras-yolo3/VOCdevkit/VOC2007/SegmentationClass"
-   ...
 ```
 
 ```
-...
-    path="输入图片路径/*.jpg"
-    outdir = "输出图片路径"
-  ...
+    path="你的输入图片路径/*.jpg"
+    outdir = "你的输出图片路径"
+```
+之后运行：
+```
+    python tw_yolo.py
 ```
 ---
 
