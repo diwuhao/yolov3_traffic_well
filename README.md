@@ -53,14 +53,44 @@ tesseract v4.0.0-beta.1.20180608
 ```
 若有其他报错则继续安装依赖包
 
-4. 在yolov3根目录下，在git bash中运行
+4. 将权重文件yolo.h5放置到yolov3_traffic_well/model_data路径下（不然会运行第5步的python yolo.py会报错：找不到yolo.h5文件)
+
+    权重文件请联系我、汪所或者谭哲（周六发到qq邮箱的yolo压缩包就是）
+
+5. 在yolov3根目录下，在git bash中运行
 ```
     python yolo.py
 ```
 
 不报错则表示安装正常，报错请联系1214279441@qq.com
 
+6. 更改tw_yolo.py的输入图片文件位置
+将
+```
+   import glob
+def detect_img(yolo):
+    path="C:/Users/12142/Desktop/keras-yolo3/VOCdevkit/VOC2007/JPEGImages/1016/*.jpg"
+    outdir = "C:/Users/12142/Desktop/keras-yolo3/VOCdevkit/VOC2007/SegmentationClass"
+    for jpgfile in glob.glob(path):
+        img = Image.open(jpgfile)
+        img = yolo.detect_image(img)
+        img.save(os.path.join(outdir, os.path.basename(jpgfile)))
+        print(jpgfile)
+    yolo.close_session()
+```
 
+```
+ import glob
+def detect_img(yolo):
+    path="输入图片路径/*.jpg"
+    outdir = "输出图片路径"
+    for jpgfile in glob.glob(path):
+        img = Image.open(jpgfile)
+        img = yolo.detect_image(img)
+        img.save(os.path.join(outdir, os.path.basename(jpgfile)))
+        print(jpgfile)
+    yolo.close_session()
+```
 ---
 
 ## Quick Start
