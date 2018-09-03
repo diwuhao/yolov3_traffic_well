@@ -35,7 +35,7 @@ A Keras implementation of YOLOv3 (Tensorflow backend) inspired by [allanzelener/
       $ python --version
     Python 3.6.5 :: Anaconda, Inc.
     ```
-   3）检验tesseract-ocr（orc模块尚未完全加入，目前可以不用装）
+   3) 检验tesseract-ocr（orc模块尚未完全加入，目前可以不用装）
     ```
        tesseract -v
     ```
